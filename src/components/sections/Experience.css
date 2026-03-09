@@ -1,0 +1,126 @@
+.experience-section {
+  padding: 8rem 0;
+  position: relative;
+  z-index: var(--z-content);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.timeline-container {
+  max-width: 800px;
+  margin: 4rem auto 0;
+  position: relative;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 24px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, var(--border-color), transparent);
+}
+
+@media (min-width: 768px) {
+  .timeline-line {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.timeline-items {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  position: relative;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 60px;
+}
+
+@media (min-width: 768px) {
+  .timeline-item {
+    width: 50%;
+    padding-left: 0;
+    padding-right: 40px;
+  }
+  
+  .timeline-item:nth-child(even) {
+    margin-left: auto;
+    padding-left: 40px;
+    padding-right: 0;
+  }
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 20px;
+  top: 24px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--text-primary);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+@media (min-width: 768px) {
+  .timeline-dot {
+    left: auto;
+    right: -5px;
+  }
+  
+  .timeline-item:nth-child(even) .timeline-dot {
+    right: auto;
+    left: -5px;
+  }
+}
+
+.timeline-content {
+  padding: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  background: var(--surface-hover);
+}
+
+.experience-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.experience-icon {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.75rem;
+  border-radius: 12px;
+}
+
+.experience-role {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+  font-family: var(--font-heading);
+}
+
+.experience-company {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.experience-type {
+  color: #4f46e5; /* Subdued neon accent */
+  font-weight: 500;
+}
+
+.experience-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
